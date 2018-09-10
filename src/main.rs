@@ -1,3 +1,5 @@
+extern crate leapyear_rs;
+
 use std::env;
 use std::process;
 
@@ -17,14 +19,9 @@ fn main() {
     };
 
     let mut res: u32 = 0;
-    if is_leapyear(year) {
+    if leapyear_rs::is_leapyear(year) {
         res = 1;
     }
 
     println!("{} - {}", year, res);
-}
-
-fn is_leapyear(year: u32) -> bool {
-    let f = |x| year % x == 0;
-    f(4) && (!f(100) || f(400))
 }
