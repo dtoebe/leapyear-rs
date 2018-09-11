@@ -18,10 +18,5 @@ fn main() {
         }
     };
 
-    let mut res: u32 = 0;
-    if leapyear_rs::is_leapyear(year) {
-        res = 1;
-    }
-
-    println!("{} - {}", year, res);
+    print!("{}", leapyear_rs::gen_output(year));
 }
