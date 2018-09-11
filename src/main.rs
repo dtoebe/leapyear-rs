@@ -18,5 +18,5 @@ fn main() {
         }
     };
 
-    print!("{}", leapyear_rs::gen_output(year));
+    print!("{}", leapyear_rs::gen_output_u32(year));
 }
